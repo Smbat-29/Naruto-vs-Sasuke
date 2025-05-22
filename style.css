@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+@font-face {
+  font-family: font;
+  src: url(./Images/font1.ttf);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./Images/Arena4.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  display: flex;
+  position: relative;
+}
+.container .forWinner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  display: none;
+  z-index: 123;
+}
+.container .forWinner .divForText {
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFD700;
+  text-shadow: 0px 2px 15px rgba(255, 215, 0, 0.8);
+}
+.container .forWinner .divForText #winnerName {
+  font-size: 36px;
+  font-weight: bold;
+  animation: glow 2s infinite alternate;
+}
+.container .forWinner .divForPicture {
+  width: 80%;
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container .forWinner .buttonsSection {
+  width: 40%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.container .forWinner .buttonsSection #playAgain,
+.container .forWinner .buttonsSection #change {
+  width: 36%;
+  height: 60%;
+  border: 2px solid rgba(247, 166, 16, 0.717);
+  border-radius: 10px 50px 10px;
+  background: linear-gradient(45deg, #FF8C00, #FFD700);
+  color: black;
+  font-size: 28px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.container .forWinner .buttonsSection #playAgain:hover,
+.container .forWinner .buttonsSection #change:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.9);
+}
+.container .leftSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .leftSection .firstSec {
+  width: 100%;
+  height: 22%;
+  display: flex;
+  position: relative;
+}
+.container .leftSection .firstSec #persLeftName {
+  position: absolute;
+  left: 22%;
+  top: 20%;
+  font-size: 50px;
+  color: #FFD700;
+  font-family: font;
+  text-shadow: 0px 2px 15px rgb(222, 196, 52);
+}
+.container .leftSection .firstSec .forLeftLogo {
+  width: 125px;
+  height: 125px;
+  border-radius: 100px;
+  position: absolute;
+  left: 30px;
+  top: 10%;
+  background-image: url(./Images/forLogo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: contrast(1);
+  border: 3px solid #FFD700;
+}
+.container .leftSection .firstSec .helfOfLeft {
+  width: 44%;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 78%;
+  left: 20%;
+  background-color: black;
+}
+.container .leftSection .firstSec .helfOfLeft .procentLeft {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(to right, #FF4500, #FFD700);
+}
+.container .leftSection .seconSec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.container .leftSection .seconSec .forImage {
+  width: 44%;
+  height: 84%;
+  margin-left: 48%;
+  margin-top: 4%;
+}
+.container .leftSection .seconSec .forImage #narutoImg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.container .leftSection .seconSec .thirdSec {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .leftSection .seconSec .thirdSec #leftAtack,
+.container .leftSection .seconSec .thirdSec #leftSup,
+.container .leftSection .seconSec .thirdSec #leftHealth {
+  width: 76%;
+  height: 12%;
+  border: 2px solid rgba(247, 166, 16, 0.717);
+  border-radius: 10px 50px 10px;
+  background: linear-gradient(45deg, #FF8C00, #FFD700);
+  color: black;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.container .leftSection .seconSec .thirdSec #leftAtack:hover,
+.container .leftSection .seconSec .thirdSec #leftSup:hover,
+.container .leftSection .seconSec .thirdSec #leftHealth:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.9);
+}
+.container .rightSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .rightSection .oneSec {
+  width: 100%;
+  height: 23%;
+  display: flex;
+  position: relative;
+}
+.container .rightSection .oneSec .forRightLogo {
+  width: 125px;
+  height: 125px;
+  border-radius: 100px;
+  background-image: url(./Images/sasukeLog.png);
+  background-position: 210% 30%;
+  filter: contrast(1);
+  position: absolute;
+  left: 80%;
+  top: 10%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 3px solid #FFD700;
+}
+.container .rightSection .oneSec #persRightName {
+  position: absolute;
+  left: 48%;
+  top: 26%;
+  font-size: 50px;
+  color: #FFD700;
+  font-family: font;
+  text-shadow: 0px 2px 15px rgb(222, 196, 52);
+}
+.container .rightSection .oneSec .helfOfRight {
+  width: 44%;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 78%;
+  left: 36%;
+  background-color: black;
+}
+.container .rightSection .oneSec .helfOfRight .procentRight {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(to right, #FF4500, #FFD700);
+}
+.container .rightSection .twoSec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.container .rightSection .twoSec .forRightImg {
+  width: 36%;
+  height: 84%;
+  margin-left: 14%;
+  margin-top: 4%;
+}
+.container .rightSection .twoSec .forRightImg #sasukeImg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.container .rightSection .twoSec .threeSec {
+  position: absolute;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .rightSection .twoSec .threeSec #rightAtack,
+.container .rightSection .twoSec .threeSec #rightSup,
+.container .rightSection .twoSec .threeSec #rightHealth {
+  width: 76%;
+  height: 12%;
+  border: 2px solid rgba(247, 166, 16, 0.836);
+  border-radius: 10px 50px 10px;
+  background: linear-gradient(45deg, #FF8C00, #FFD700);
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.container .rightSection .twoSec .threeSec #rightAtack:hover,
+.container .rightSection .twoSec .threeSec #rightSup:hover,
+.container .rightSection .twoSec .threeSec #rightHealth:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.9);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgb(255, 215, 0), 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+}
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
